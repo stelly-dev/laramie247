@@ -47,7 +47,7 @@ export const tiers: Tier[] = [
         benefits: [
             {
                 title: "Voting Membership",
-                description: "Vote in annual board elections and influence station priorities"
+                description: "A vote in annual board elections and influence in station priorities"
             },
             {
                 title: "Jackalope Insider Newsletter",
@@ -79,11 +79,11 @@ export const tiers: Tier[] = [
         benefits: [
             {
                 title: "All Prairie Listener benefits",
-                description: "plus"
+                description: ""
             },
             {
                 title: "Studio Time + Gear",
-                description: "Monthly access to Blackmagic Design equipment and discounted rates from our staff to film your show"
+                description: "Monthly access to production equipment and discounted rates from our staff to film your show"
             },
             {
                 title: "Swag Pack",
@@ -91,14 +91,14 @@ export const tiers: Tier[] = [
             },
             {
                 title: "On-Air Shout-Out",
-                description: "Your name or local business featured in the credits of Laramie247 productions"
+                description: "Your name or local business featured in the credits of all Laramie247 productions"
             },
             {
                 title: "Free Access",
-                description: "to all of our Workshops!"
+                description: "All Laramie247 workshops"
             }
         ],
-        detailedDescription: "Ready to create? The Jackalope Producer tier is for the makers. Gain access to professional equipment and staff support to bring your own vision to life. Wear your support with pride with our exclusive swag pack, and get recognized on-air for your substantial contribution to community media.",
+        detailedDescription: "Ready to create? The Jackalope Producer tier is for the makers. Gain access to production equipment and discounted staff rates to bring your own vision to life. Wear your support with pride with our exclusive swag pack, and get recognized on-air for your substantial contribution to community media.",
         heroImage: "/images/tiers/jackalope-producer-hero.png"
     },
     {
@@ -106,31 +106,27 @@ export const tiers: Tier[] = [
         slug: "mountain-visionary",
         price: {
             monthly: "$100/month",
-            yearly: "$1000/year"
+            yearly: "$1,000/year"
         },
         benefits: [
             {
-                title: "All Jackalope producer benefits",
-                description: "plus"
+                title: "All Jackalope Producer benefits",
+                description: ""
             },
             {
-                title: "Invited to all quarterly round-table",
-                description: "on the range meetings"
+                title: "Round-table meetings",
+                description: "Invited to join all quarterly meetings"
             },
             {
                 title: "Programming Selection",
-                description: "Giving an opportunity to select the next quarter's programming schedule"
+                description: "An opportunity to help select the next quarter's programming schedule"
             },
             {
                 title: "Name on Legendary Jackalope Plaque",
                 description: ""
-            },
-            {
-                title: "Seat at our annual Wyoming style cookout",
-                description: "honoring top supporters"
             }
         ],
-        detailedDescription: "The pinnacle of support. As a Mountain Visionary, you help shape the strategic direction of Laramie247. Join us for high-level discussions, diverse programming selections, and exclusive events. Your legacy will be immortalized on our Legendary Jackalope Plaque.",
+        detailedDescription: "The pinnacle of support. As a Mountain Visionary, you help shape the strategic direction of Laramie247. Join our quarterly round-table meetings, help select the next quarter's programming schedule, and have your name added to our Legendary Jackalope Plaque.",
         heroImage: "/images/tiers/mountain-visionary-hero.png"
     }
 ];
