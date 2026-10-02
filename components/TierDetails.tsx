@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
-import { Tier } from '@/data/membershipTiers';
+import { Tier, membershipCheckoutUrl } from '@/data/membershipTiers';
 import { useRef } from 'react';
 
 export default function TierDetails({ tier }: { tier: Tier }) {
@@ -20,7 +20,6 @@ export default function TierDetails({ tier }: { tier: Tier }) {
 
     return (
         <div ref={ref} className="min-h-screen bg-white">
-            {/* Hero Section with Parallax Effect */}
             <div className="relative h-[60vh] overflow-hidden w-full bg-gray-900 flex items-end justify-center pb-16">
                 <motion.div
                     className="absolute inset-0 w-full h-full"
@@ -45,13 +44,12 @@ export default function TierDetails({ tier }: { tier: Tier }) {
                     >
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-lg">{tier.title}</h1>
                         <p className="text-xl md:text-2xl text-gray-200 font-light tracking-wide">
-                            {tier.price.monthly} • {tier.price.yearly}
+                            {tier.price.monthly} · {tier.price.yearly}
                         </p>
                     </motion.div>
                 </div>
             </div>
 
-            {/* Content Section */}
             <div className="container mx-auto px-4 py-16 -mt-10 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -60,7 +58,7 @@ export default function TierDetails({ tier }: { tier: Tier }) {
                     className="bg-white rounded-xl shadow-2xl p-4 md:p-12 max-w-4xl mx-auto"
                 >
                     <Link href="/membership" className="inline-flex items-center text-primary hover:text-primary-dark mb-8 transition-colors group">
-                        <FaArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" />
+                        <FaArrowLeft aria-hidden="true" className="mr-2 group-hover:-translate-x-1 transition-transform" />
                         Back to Membership Tiers
                     </Link>
 
@@ -72,11 +70,11 @@ export default function TierDetails({ tier }: { tier: Tier }) {
                     </div>
 
                     <div className="bg-gray-50 rounded-xl p-6 md:p-8 border border-gray-100">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6">What&apos;s Included</h3>
+                        <h2 className="text-2xl font-bold text-gray-800 mb-6">What&apos;s Included</h2>
                         <div className="grid md:grid-cols-2 gap-4">
                             {tier.benefits.map((benefit, index) => (
                                 <div key={index} className="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
-                                    <FaCheckCircle className="h-5 w-5 md:h-6 md:w-6 text-accent mt-1 mr-3 flex-shrink-0" />
+                                    <FaCheckCircle aria-hidden="true" className="h-5 w-5 md:h-6 md:w-6 text-accent mt-1 mr-3 flex-shrink-0" />
                                     <span className="text-gray-700 font-medium text-sm md:text-base">
                                         <span className="font-bold text-gray-900">
                                             {benefit.title}
@@ -94,9 +92,30 @@ export default function TierDetails({ tier }: { tier: Tier }) {
                     </div>
 
                     <div className="mt-12 text-center">
-                        <button className="bg-primary hover:bg-primary-dark text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                            Join Now
-                        </button>
+                        <h2 className="text-2xl font-bold text-gray-900">Choose your membership</h2>
+                        <p className="mt-2 text-gray-600">
+                            Both options open Laramie247&apos;s Zeffy membership form. Select this tier and billing schedule there.
+                        </p>
+                        <div className="mx-auto mt-6 grid max-w-xl gap-3 sm:grid-cols-2">
+                            <a
+                                href={membershipCheckoutUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={`Choose ${tier.title} monthly membership on Zeffy, ${tier.price.monthly}`}
+                                className="rounded-full bg-primary px-6 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-primary-dark"
+                            >
+                                Monthly · {tier.price.monthly}
+                            </a>
+                            <a
+                                href={membershipCheckoutUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={`Choose ${tier.title} annual membership on Zeffy, ${tier.price.yearly}`}
+                                className="rounded-full border border-primary px-6 py-4 text-lg font-bold text-primary transition-colors hover:bg-primary/5"
+                            >
+                                Annual · {tier.price.yearly}
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
             </div>
