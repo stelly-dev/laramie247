@@ -16,6 +16,9 @@ export interface Tier {
     heroImage: string;
 }
 
+export const membershipCheckoutUrl =
+    "https://www.zeffy.com/en-US/ticketing/laramie247-incs-memberships";
+
 export const tiers: Tier[] = [
     {
         title: "General Member",
@@ -27,14 +30,14 @@ export const tiers: Tier[] = [
         benefits: [
             {
                 title: "Jackalope Alert",
-                description: "Text notifications when new local shows drop on our Roku station"
+                description: "Text notifications when new local shows are available on our Roku station."
             },
             {
-                title: "Social Media Horn Toss",
-                description: "Your name shared in a fun jackalope-themed thank-you post"
+                title: "Social media thank-you",
+                description: "A fun, jackalope-themed post recognizing your support."
             }
         ],
-        detailedDescription: "Become a foundational part of the Laramie247 community. As a General Member, you're not just a viewer; you're a supporter of independent, local media. Get instant alerts so you never miss a show, and see your name up in lights (well, on our social feed) as a thank you for keeping us hopping.",
+        detailedDescription: "Support independent local media and help keep Laramie247's community programming going. General Members receive text alerts when new local shows are available on our Roku station and a jackalope-themed thank-you on social media.",
         heroImage: "/images/tiers/general-member-hero.png"
     },
     {
@@ -46,27 +49,27 @@ export const tiers: Tier[] = [
         },
         benefits: [
             {
-                title: "Voting Membership",
-                description: "Vote in annual board elections and influence station priorities"
+                title: "Voting membership",
+                description: "Vote in annual board elections and have a voice in station priorities."
             },
             {
-                title: "Jackalope Insider Newsletter",
-                description: "Weekly highlights of local shows, citizen journalism tips, and community events"
+                title: "Jackalope Insider newsletter",
+                description: "Weekly local show highlights, citizen journalism tips, and community events."
             },
             {
-                title: "Bumper Sticker",
-                description: "to showcase your support"
+                title: "Bumper sticker",
+                description: "A Laramie247 sticker to show your support."
             },
             {
-                title: "Virtual Studio Tour",
-                description: "Peek behind the curtain at how Laramie247 makes community content"
+                title: "Story pitches",
+                description: "Suggest topics for community programs."
             },
             {
-                title: "Story Pitch Submission",
-                description: "Suggest topics for community programs"
+                title: "Virtual studio tour",
+                description: "See how Laramie247 creates community content."
             }
         ],
-        detailedDescription: "Step up your involvement with the Prairie Listener tier. You get a voice in our future with voting rights, inside scoops via our newsletter, and a tangible piece of Laramie247 with our bumper sticker. Plus, influence our content directly by pitching stories and seeing how the magic happens with a virtual tour.",
+        detailedDescription: "Get more involved in the future of local media. Prairie Listeners can vote in annual board elections, receive a weekly newsletter with local show highlights and community news, suggest story topics, take a virtual studio tour, and receive a Laramie247 bumper sticker.",
         heroImage: "/images/tiers/prairie-listener-hero.png"
     },
     {
@@ -78,27 +81,27 @@ export const tiers: Tier[] = [
         },
         benefits: [
             {
-                title: "All Prairie Listener benefits",
-                description: "plus"
+                title: "Everything in Prairie Listener",
+                description: "All Prairie Listener benefits, plus:"
             },
             {
-                title: "Studio Time + Gear",
-                description: "Monthly access to Blackmagic Design equipment and discounted rates from our staff to film your show"
+                title: "Studio time and gear",
+                description: "Monthly access to production equipment, with discounted staff rates to film your show."
             },
             {
-                title: "Swag Pack",
-                description: "T-shirt with Laramie 247 logo and the tagline \"Made in Laramie, Streamed Worldwide\""
+                title: "Workshop access",
+                description: "Free access to Laramie247 workshops."
             },
             {
-                title: "On-Air Shout-Out",
-                description: "Your name or local business featured in the credits of Laramie247 productions"
+                title: "Laramie247 T-shirt",
+                description: "A shirt with the “Made in Laramie, Streamed Worldwide” tagline."
             },
             {
-                title: "Free Access",
-                description: "to all of our Workshops!"
+                title: "On-air shout-out",
+                description: "Your name or local business featured in the credits of Laramie247 productions."
             }
         ],
-        detailedDescription: "Ready to create? The Jackalope Producer tier is for the makers. Gain access to professional equipment and staff support to bring your own vision to life. Wear your support with pride with our exclusive swag pack, and get recognized on-air for your substantial contribution to community media.",
+        detailedDescription: "Make your own community media with support from Laramie247. Jackalope Producers receive all Prairie Listener benefits, monthly access to production equipment, discounted staff rates to film a show, free workshop access, a Laramie247 T-shirt, and an on-air credit in Laramie247 productions.",
         heroImage: "/images/tiers/jackalope-producer-hero.png"
     },
     {
@@ -106,31 +109,27 @@ export const tiers: Tier[] = [
         slug: "mountain-visionary",
         price: {
             monthly: "$100/month",
-            yearly: "$1000/year"
+            yearly: "$1,000/year"
         },
         benefits: [
             {
-                title: "All Jackalope producer benefits",
-                description: "plus"
+                title: "Everything in Jackalope Producer",
+                description: "All Jackalope Producer benefits, plus:"
             },
             {
-                title: "Invited to all quarterly round-table",
-                description: "on the range meetings"
+                title: "Programming selection",
+                description: "An opportunity to help select the next quarter's programming schedule."
             },
             {
-                title: "Programming Selection",
-                description: "Giving an opportunity to select the next quarter's programming schedule"
+                title: "Quarterly round tables",
+                description: "An invitation to join all quarterly round-table meetings."
             },
             {
-                title: "Name on Legendary Jackalope Plaque",
-                description: ""
-            },
-            {
-                title: "Seat at our annual Wyoming style cookout",
-                description: "honoring top supporters"
+                title: "Legendary Jackalope Plaque",
+                description: "Your name displayed on the plaque."
             }
         ],
-        detailedDescription: "The pinnacle of support. As a Mountain Visionary, you help shape the strategic direction of Laramie247. Join us for high-level discussions, diverse programming selections, and exclusive events. Your legacy will be immortalized on our Legendary Jackalope Plaque.",
+        detailedDescription: "Help shape what Laramie247 brings to the community. Mountain Visionaries receive all Jackalope Producer benefits, an opportunity to help select the next quarter's programming schedule, invitations to quarterly round-table meetings, and recognition on the Legendary Jackalope Plaque.",
         heroImage: "/images/tiers/mountain-visionary-hero.png"
     }
 ];
